@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="listview_normal">#ffffff</color>
+    <color name="listview_active">#dcdcdc</color>
+    
+    <color name="listview_divider">#d9d9d9</color>
+    
+    <color name="title_left">#008080</color>
+    <color name="title_left_pressed">#2F4F4F</color>
+</resources>
