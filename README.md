@@ -24,4 +24,4 @@ MyTest
     />
     
     效果如下：
-![github](https://github.com/handezhao/MyTest.git/picture/divider.png)
+![github](https://github.com/handezhao/MyTest/raw/master/picture/divider.png)
