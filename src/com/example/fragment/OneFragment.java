@@ -14,6 +14,7 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import com.example.adapter.TestAdapter;
+import com.example.adapter.TestAdapter.ButtonListener;
 import com.example.bean.TestBean;
 import com.example.help.Console;
 import com.example.mytest.R;
@@ -58,12 +59,20 @@ public class OneFragment extends Fragment implements OnItemClickListener {
 		if (list.size() > 0) {
 			adapter = new TestAdapter(list, getActivity());
 			lvTest.setAdapter(adapter);
+			adapter.setButtonListener(new ButtonListener() {
+				
+
+				@Override
+				public void onclick(int position) {
+					Console.toast(getActivity(), String.valueOf(position));
+				}
+			});
 		}
 		
 	}
 
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		Toast.makeText(getActivity(), "" + position, Toast.LENGTH_SHORT).show();
+		Toast.makeText(getActivity(), "" + (position + 1), Toast.LENGTH_SHORT).show();
 	}
 }

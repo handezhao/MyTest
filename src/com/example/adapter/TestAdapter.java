@@ -1,11 +1,13 @@
 package com.example.adapter;
 
+import java.net.InterfaceAddress;
 import java.util.ArrayList;
 import java.util.List;
 
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
+import android.view.View.OnClickListener;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.Button;
@@ -25,6 +27,12 @@ public class TestAdapter extends BaseAdapter {
 		this.list = list;
 		this.inflater = LayoutInflater.from(context);
 	}
+	
+	private ButtonListener buttonListener;
+	
+	public void setButtonListener(ButtonListener listener) {
+		this.buttonListener = listener;
+	}
 
 	@Override
 	public int getCount() {
@@ -43,7 +51,7 @@ public class TestAdapter extends BaseAdapter {
 	}
 
 	@Override
-	public View getView(int position, View convertView, ViewGroup parent) {
+	public View getView(final int position, View convertView, ViewGroup parent) {
 		ViewHolder holder;
 		if (convertView == null) {
 			convertView = inflater.inflate(R.layout.item_test_bean, null);
@@ -59,6 +67,15 @@ public class TestAdapter extends BaseAdapter {
 		holder.button.setText("try");
 		holder.tvInfo.setText(list.get(position).getInfo());
 		holder.tvName.setText(list.get(position).getName());
+		holder.button.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View view) {
+				if (buttonListener != null) {
+					buttonListener.onclick(position);
+				}
+			}
+		});
 		
 		return convertView;
 	}
@@ -66,6 +83,10 @@ public class TestAdapter extends BaseAdapter {
 	class ViewHolder {
 		TextView tvName, tvInfo;
 		Button button;
+	}
+	
+	public interface ButtonListener {
+		void onclick(int position);
 	}
 
 }
