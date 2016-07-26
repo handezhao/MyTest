@@ -129,4 +129,6 @@ public class TestAdapter extends BaseAdapter {
 				}
 			});
 			
-###
+### 一个自定义的CountsVie
+		先看看效果，点击时数字加一，长按数字归零，同事加上按下效果：
+![github](https://github.com/handezhao/MyTest/raw/master/picture/countView.gif)
