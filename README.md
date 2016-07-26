@@ -30,23 +30,7 @@ MyTest
         某些场合下我们试图把，adapter中的一些点击事件移至Activity/Fragment中
         看看怎么实现，我的思路是
         在Adapter中定义一个回调接口，在Activity中实现该接口，从而实现对点击事件的响应。
-        package com.example.adapter;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import android.content.Context;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.ViewGroup;
-import android.widget.BaseAdapter;
-import android.widget.Button;
-import android.widget.TextView;
-
-import com.example.bean.TestBean;
-import com.example.mytest.R;
-
+		
 public class TestAdapter extends BaseAdapter {
 	
 	private List<TestBean> list = new ArrayList<TestBean>();
@@ -132,7 +116,7 @@ public class TestAdapter extends BaseAdapter {
 ### 一个自定义的CountsVie
 		先看看效果，点击时数字加一，长按数字归零，同事加上按下效果：
 ![github](https://github.com/handezhao/MyTest/raw/master/picture/countView.gif)
-
+		
 public class CountWidget extends View {
 
 	private Paint paint;
@@ -187,5 +171,5 @@ public class CountWidget extends View {
 			break;
 		}
 		return true;
-	}
-}
+		}
+		}
