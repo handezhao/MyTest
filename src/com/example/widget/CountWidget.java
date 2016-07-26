@@ -1,21 +1,15 @@
 package com.example.widget;
 
-import com.example.help.Console;
-
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
-import android.graphics.ColorFilter;
-import android.graphics.LightingColorFilter;
 import android.graphics.Paint;
 import android.graphics.Paint.Style;
 import android.graphics.Rect;
 import android.util.AttributeSet;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.View.OnLongClickListener;
 
 @SuppressLint("ClickableViewAccessibility")
 public class CountWidget extends View {
@@ -44,9 +38,9 @@ public class CountWidget extends View {
 		canvas.drawRect(0, 0, getWidth(), getHeight(), paint);
 		//画数字
 		Paint textPaint = new Paint();
-		textPaint.setColor(Color.parseColor("#DAA520"));
+		textPaint.setColor(Color.parseColor("#000000"));
 		String text = String.valueOf(counts);
-		textPaint.setTextSize(50);
+		textPaint.setTextSize(80);
 		
 		textPaint.getTextBounds(text, 0, text.length(), bounds);
 		float textWidth = bounds.width();
