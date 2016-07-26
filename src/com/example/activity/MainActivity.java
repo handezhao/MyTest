@@ -7,6 +7,7 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.RelativeLayout;
 
 import com.example.help.FragmentFactory;
@@ -23,6 +24,7 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 	@Override
 	protected void onCreate(Bundle bundle) {
 		super.onCreate(bundle);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.activity_main);
 		findViewById();
 		setListener();

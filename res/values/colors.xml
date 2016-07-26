@@ -7,4 +7,8 @@
     
     <color name="title_left">#008080</color>
     <color name="title_left_pressed">#2F4F4F</color>
+    
+    <color name="count_widget">#66CDAA</color>
+     <color name="count_widget_active">#3CB371</color>
+    
 </resources>

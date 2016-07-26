@@ -21,6 +21,8 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int title=0x7f010001;
     }
     public static final class color {
+        public static final int count_widget=0x7f040005;
+        public static final int count_widget_active=0x7f040006;
         public static final int listview_active=0x7f040001;
         public static final int listview_divider=0x7f040002;
         public static final int listview_normal=0x7f040000;
@@ -41,35 +43,37 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int ic_navigation_walk_active=0x7f02000a;
         public static final int listview_divider_inset=0x7f02000b;
         public static final int selector_button_default=0x7f02000c;
-        public static final int selector_default_listview=0x7f02000d;
-        public static final int selector_navigation_active=0x7f02000e;
-        public static final int selector_navigation_contact=0x7f02000f;
-        public static final int selector_navigation_message=0x7f020010;
-        public static final int selector_navigation_mine=0x7f020011;
-        public static final int selector_navigation_text_color=0x7f020012;
-        public static final int selector_navigation_walk=0x7f020013;
-        public static final int selector_title_left=0x7f020014;
+        public static final int selector_count_widget=0x7f02000d;
+        public static final int selector_default_listview=0x7f02000e;
+        public static final int selector_navigation_active=0x7f02000f;
+        public static final int selector_navigation_contact=0x7f020010;
+        public static final int selector_navigation_message=0x7f020011;
+        public static final int selector_navigation_mine=0x7f020012;
+        public static final int selector_navigation_text_color=0x7f020013;
+        public static final int selector_navigation_walk=0x7f020014;
+        public static final int selector_title_left=0x7f020015;
     }
     public static final class id {
-        public static final int button_item=0x7f070007;
+        public static final int button_item=0x7f070008;
+        public static final int countView=0x7f070005;
         public static final int fl_fragment_container=0x7f070002;
-        public static final int iv_active=0x7f07000c;
-        public static final int iv_contact=0x7f07000f;
-        public static final int iv_mine=0x7f070011;
-        public static final int iv_walking=0x7f07000a;
-        public static final int ll_contact=0x7f07000e;
-        public static final int ll_walking=0x7f070009;
+        public static final int iv_active=0x7f07000d;
+        public static final int iv_contact=0x7f070010;
+        public static final int iv_mine=0x7f070012;
+        public static final int iv_walking=0x7f07000b;
+        public static final int ll_contact=0x7f07000f;
+        public static final int ll_walking=0x7f07000a;
         public static final int lv_test=0x7f070004;
         public static final int main_bottom=0x7f070000;
-        public static final int rl_navigate_four=0x7f070010;
-        public static final int rl_navigate_one=0x7f070008;
-        public static final int rl_navigate_three=0x7f07000d;
-        public static final int rl_navigate_two=0x7f07000b;
+        public static final int rl_navigate_four=0x7f070011;
+        public static final int rl_navigate_one=0x7f070009;
+        public static final int rl_navigate_three=0x7f07000e;
+        public static final int rl_navigate_two=0x7f07000c;
         public static final int titlebar=0x7f070003;
-        public static final int tv_info=0x7f070006;
-        public static final int tv_left=0x7f070012;
-        public static final int tv_name=0x7f070005;
-        public static final int tv_title=0x7f070013;
+        public static final int tv_info=0x7f070007;
+        public static final int tv_left=0x7f070013;
+        public static final int tv_name=0x7f070006;
+        public static final int tv_title=0x7f070014;
         public static final int view_bottom_line=0x7f070001;
     }
     public static final class layout {

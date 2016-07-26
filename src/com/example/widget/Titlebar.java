@@ -62,6 +62,7 @@ public class Titlebar extends RelativeLayout {
 				}
 			}
 		}
+		a.recycle();
 	}
 
 	public void setLeftText(String text) {
