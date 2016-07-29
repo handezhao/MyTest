@@ -2,6 +2,7 @@ package com.example.bean;
 
 public class Music {
 	
+	private static final String TAG = "Music";
 	
 	/**
 	 * 标题
