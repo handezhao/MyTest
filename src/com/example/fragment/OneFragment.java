@@ -70,7 +70,7 @@ public class OneFragment extends Fragment implements OnItemClickListener {
 		}
 		
 	}
-
+	
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		Toast.makeText(getActivity(), "" + (position + 1), Toast.LENGTH_SHORT).show();

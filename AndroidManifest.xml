@@ -34,6 +34,18 @@
             </intent-filter>
         </activity>
         
+        <activity 
+            android:name="com.example.activity.TestActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        
+        <activity 
+            android:name="com.example.activity.DevicesInfoActivity"
+            android:screenOrientation="portrait"
+            >
+        </activity>
+        
     </application>
 
 </manifest>

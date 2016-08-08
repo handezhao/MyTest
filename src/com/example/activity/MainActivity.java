@@ -113,4 +113,39 @@ public class MainActivity extends FragmentActivity implements OnClickListener{
 		switchingFragment = false;
 	
 	}
+	
+	@Override
+	protected void onStop() {
+		// TODO Auto-generated method stub
+//		Toast.makeText(this, "on stop", Toast.LENGTH_LONG).show();
+		super.onStop();
+	}
+	
+	@Override
+	protected void onPause() {
+		super.onPause();
+		
+//		Toast.makeText(this, "on pause", Toast.LENGTH_LONG).show();
+//		new Thread() {
+//			public void run() {
+//				try {
+//					Thread.sleep(3000);
+//				} catch (InterruptedException e) {
+//					// TODO Auto-generated catch block
+//					e.printStackTrace();
+//				}
+//				
+//				MainActivity.this.runOnUiThread(new Runnable() {
+//					
+//					@Override
+//					public void run() {
+//						Toast.makeText(MainActivity.this, "start another", Toast.LENGTH_LONG).show();
+//					}
+//				});
+//				
+//				Intent intent = new Intent(MainActivity.this, TestActivity.class);
+//				MainActivity.this.startActivity(intent);
+//			};
+//		}.start();
+	}
 }

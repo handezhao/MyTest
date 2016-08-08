@@ -5,6 +5,8 @@
     <color name="listview_active">#dcdcdc</color>
     <color name="listview_divider">#d9d9d9</color>
     <color name="title_left">#008080</color>
+    <color name="default_text_color">#454545</color>
+    
     <color name="title_left_pressed">#2F4F4F</color>
     <color name="count_widget">#66CDAA</color>
     <color name="count_widget_active">#3CB371</color>
@@ -28,5 +30,6 @@
     <color name="translucent_grey_300_96p">#F5E0E0E0</color>
     <color name="translucent_grey_900_96p">#F5212121</color>
     <color name="translucent_grey_700_96p">#F5616161</color>
+    
 
 </resources>
