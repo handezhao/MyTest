@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res/com.example.mytest"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <com.example.widget.Titlebar
+        android:id="@+id/titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:left_text="@string/back"
+        app:title="detect" />
+
+    <TextView
+        android:id="@+id/tv_back_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="80dp"
+        android:background="@drawable/selector_button_default"
+        android:padding="10dp"
+        android:text="后置摄像头"
+        android:textColor="@color/default_text_color"
+        android:textSize="16sp" />
+    
+    <TextView
+        android:id="@+id/tv_front_camera"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_button_default"
+        android:padding="10dp"
+        android:text="前置摄像头"
+        android:textColor="@color/default_text_color"
+        android:textSize="16sp" />
+
+</LinearLayout>

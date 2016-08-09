@@ -10,6 +10,7 @@ import android.view.ViewGroup;
 import android.webkit.WebView.FindListener;
 import android.widget.TextView;
 
+import com.example.activity.DetectActivity;
 import com.example.activity.DevicesInfoActivity;
 import com.example.activity.DisplayActivity;
 import com.example.activity.SensorActivity;
@@ -66,7 +67,7 @@ public class TwoFragment extends Fragment {
 			@Override
 			public void onClick(View view) {
 				Intent intent = new Intent();
-				intent.setClass(getActivity(), SensorActivity.class);
+				intent.setClass(getActivity(), DetectActivity.class);
 				startActivity(intent);
 			}
 		});
