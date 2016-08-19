@@ -18,6 +18,7 @@ import com.example.adapter.TestAdapter.ButtonListener;
 import com.example.bean.TestBean;
 import com.example.help.Console;
 import com.example.mytest.R;
+import com.example.util.ToastUtil;
 import com.example.widget.Titlebar;
 
 public class OneFragment extends Fragment implements OnItemClickListener {
@@ -43,6 +44,9 @@ public class OneFragment extends Fragment implements OnItemClickListener {
 				Console.toast(getActivity(), "hahaha");
 			}
 		});
+		View toastView = inflater.inflate(R.layout.toast, null);
+		ToastUtil toast = new ToastUtil(getActivity(), toastView, 500);
+		toast.show();
 		initdata();
 		return view;
 	}
