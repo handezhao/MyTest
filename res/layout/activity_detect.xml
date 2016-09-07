@@ -20,7 +20,7 @@
         android:layout_marginTop="80dp"
         android:background="@drawable/selector_button_default"
         android:padding="10dp"
-        android:text="后置摄像头"
+        android:text="singletop"
         android:textColor="@color/default_text_color"
         android:textSize="16sp" />
     
@@ -32,7 +32,7 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/selector_button_default"
         android:padding="10dp"
-        android:text="前置摄像头"
+        android:text="singletask"
         android:textColor="@color/default_text_color"
         android:textSize="16sp" />
 

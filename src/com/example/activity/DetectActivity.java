@@ -1,22 +1,20 @@
 package com.example.activity;
 
-import android.app.Activity;
 import android.content.Intent;
-import android.hardware.Camera;
 import android.os.Bundle;
-import android.provider.MediaStore;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
 import android.widget.TextView;
 
+import com.example.help.Console;
 import com.example.mytest.R;
 
-public class DetectActivity extends Activity {
+public class DetectActivity extends BaseActivity {
 
-	private TextView tvFrontCamera, tvBackCamera;
+	private TextView tvToSingleTask, tvBackCamera;
 
-	private boolean cameraFront = false;
+	public static final int REQUEST_CODE_SINGLETASK = 10;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -27,12 +25,14 @@ public class DetectActivity extends Activity {
 	}
 
 	private void init() {
-		tvFrontCamera = (TextView) findViewById(R.id.tv_front_camera);
-		tvFrontCamera.setOnClickListener(new OnClickListener() {
+		tvToSingleTask = (TextView) findViewById(R.id.tv_front_camera);
+		tvToSingleTask.setOnClickListener(new OnClickListener() {
 
 			@Override
 			public void onClick(View view) {
-				startFrontCamera();
+				Intent intent = new Intent();
+				intent.setClass(DetectActivity.this, SingleTaskActivity.class);
+				startActivityForResult(intent, REQUEST_CODE_SINGLETASK);
 			}
 
 		});
@@ -42,63 +42,25 @@ public class DetectActivity extends Activity {
 
 			@Override
 			public void onClick(View view) {
-				startBackCamera();
 			}
 
 		});
 
 	}
-
-	private void startBackCamera() {
-		// Intent intent = new Intent();
-		// intent.setAction(MediaStore.ACTION_IMAGE_CAPTURE);
-		// intent.putExtra("autofocus", true);
-		// startActivityForResult(intent,0);
-		Camera camera = null; 
+	
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (resultCode != RESULT_OK) {
+			Console.toast(this, "result not ok");
+			return;
+		} 
+		if (requestCode == REQUEST_CODE_SINGLETASK) {
+			int result = data.getIntExtra(SingleTaskActivity.RESULT, 2);
+			Console.toast(this, "回调成功！" + result);
+			
+		}
 		
-		 int CammeraIndex= findBackFacingCamera();
-	        if(CammeraIndex == -1) {
-	        	CammeraIndex = findFrontFacingCamera();
-	        }
-	    	camera = Camera.open(CammeraIndex);
-	}
-
-	private void startFrontCamera() {
-		// TODO Auto-generated method stub
-
-	}
-
-	private int findFrontFacingCamera() {
-		int cameraId = -1;
-		// Search for the front facing camera
-		int numberOfCameras = Camera.getNumberOfCameras();
-		for (int i = 0; i < numberOfCameras; i++) {
-			Camera.CameraInfo info = new Camera.CameraInfo();
-			Camera.getCameraInfo(i, info);
-			if (info.facing == Camera.CameraInfo.CAMERA_FACING_FRONT) {
-				cameraId = i;
-				cameraFront = true;
-				break;
-			}
-		}
-		return cameraId;
-	}
-
-	private int findBackFacingCamera() {
-		int cameraId = -1;
-		// Search for the back facing camera
-		// get the number of cameras
-		int numberOfCameras = Camera.getNumberOfCameras();
-		// for every camera check
-		for (int i = 0; i < numberOfCameras; i++) {
-			Camera.CameraInfo info = new Camera.CameraInfo();
-			Camera.getCameraInfo(i, info);
-			if (info.facing == Camera.CameraInfo.CAMERA_FACING_BACK) {
-				cameraId = i;
-				cameraFront = false;
-				break;
-			}
-		}
-		return cameraId;
+		super.onActivityResult(requestCode, resultCode, data);
 	}
 }
