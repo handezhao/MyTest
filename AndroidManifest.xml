@@ -65,6 +65,13 @@
             android:launchMode="singleTask"
             android:screenOrientation="portrait" >
         </activity>
+        
+        <activity
+            android:name="com.example.activity.TouchEventActivity"
+            android:screenOrientation="portrait" >
+        </activity>
+        
+        
     </application>
 
 </manifest>

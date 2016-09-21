@@ -13,5 +13,17 @@
         android:layout_gravity="center"
         />
     
+    <TextView 
+        android:id="@+id/tv_touch"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:textColor="#454545"
+        android:textSize="18sp"
+        android:padding="10dp"
+        android:text="TOTOUCH"
+        android:background="@drawable/selector_button_default"
+        android:layout_marginTop="200dp"
+        android:layout_gravity="center"
+        />
 
 </LinearLayout>
