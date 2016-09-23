@@ -26,6 +26,7 @@
         android:required="false" />
 
     <application
+        android:name="com.example.application.BaseApplication"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
@@ -70,7 +71,12 @@
             android:name="com.example.activity.TouchEventActivity"
             android:screenOrientation="portrait" >
         </activity>
-        
+        <activity
+            android:name="com.example.activity.AnimationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.activity.PositionAnimationActivity"
+            android:screenOrientation="portrait" />
         
     </application>
 

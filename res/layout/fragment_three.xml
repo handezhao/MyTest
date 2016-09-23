@@ -3,27 +3,48 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-    
-    <TextView 
-        android:layout_height="wrap_content"
+
+    <TextView
         android:layout_width="wrap_content"
-        android:textColor="#454545"
-        android:textSize="18sp"
-        android:text="three"
+        android:layout_height="wrap_content"
         android:layout_gravity="center"
-        />
-    
-    <TextView 
-        android:id="@+id/tv_touch"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
+        android:text="three"
         android:textColor="#454545"
-        android:textSize="18sp"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_touch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="200dp"
+        android:background="@drawable/selector_button_default"
         android:padding="10dp"
         android:text="TOTOUCH"
+        android:textColor="#454545"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/tv_animation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
         android:background="@drawable/selector_button_default"
-        android:layout_marginTop="200dp"
-        android:layout_gravity="center"
-        />
+        android:padding="10dp"
+        android:text="ANIMATION"
+        android:textColor="#454545"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_position"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_button_default"
+        android:padding="10dp"
+        android:text="Position"
+        android:textColor="#454545"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18sp" />
 
 </LinearLayout>
