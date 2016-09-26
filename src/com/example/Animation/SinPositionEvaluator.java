@@ -30,8 +30,8 @@ public class SinPositionEvaluator implements TypeEvaluator {
 	 * 计算X坐标
 	 */
 	private float forCurrentX(float fraction) {
-		float range = 120f;// 振幅
-		float resultX = 160f + (float) Math.sin((10 * fraction) * Math.PI) * range;// 周期为5，故为10fraction
+		float range = 180f;// 振幅
+		float resultX = 260f + (float) Math.sin((10 * fraction) * Math.PI) * range;// 周期为5，故为10fraction
 		return resultX;
 	}
 

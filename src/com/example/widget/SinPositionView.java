@@ -50,7 +50,7 @@ public class SinPositionView extends View {
 	}
 
 	private void startAnimation() {
-		ValueAnimator animator = ValueAnimator.ofObject(new SinPositionEvaluator(), new Point(getWidth()/2, RADIUS), new Point(getWidth()/2, getHeight() - RADIUS));
+		ValueAnimator animator = ValueAnimator.ofObject(new SinPositionEvaluator(), new Point(getWidth() + RADIUS, RADIUS), new Point(getWidth() + RADIUS, getHeight() - RADIUS));
 		animator.addUpdateListener(new AnimatorUpdateListener() {
 			
 			@Override
