@@ -7,17 +7,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.ViewGroup;
-import android.webkit.WebView.FindListener;
 import android.widget.TextView;
 
 import com.example.activity.AnimationActivity;
 import com.example.activity.PositionAnimationActivity;
+import com.example.activity.SinPathActivity;
 import com.example.activity.TouchEventActivity;
 import com.example.mytest.R;
 
 public class ThreeFragment extends Fragment {
 	
-	private TextView tvTouch, tvAnimation, tvPosition;
+	private TextView tvTouch, tvAnimation, tvPosition, tvSin;
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_three, container, false);
@@ -48,6 +48,16 @@ public class ThreeFragment extends Fragment {
 				startActivity(new Intent(getActivity(), PositionAnimationActivity.class));
 			}
 		});
+		
+		tvSin = (TextView) view.findViewById(R.id.tv_sin);
+		tvSin.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View view) {
+				startActivity(new Intent(getActivity(), SinPathActivity.class));
+			}
+		});
+		
 		return view;
 	}
 
