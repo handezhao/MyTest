@@ -8,6 +8,7 @@ public class SinPositionEvaluator implements TypeEvaluator {
 
 	@Override
 	public Object evaluate(float fraction, Object start, Object end) {
+		//将开始和结束位置强制转换成Point类
 		Point startPoint = (Point) start;
 		float x = forCurrentX(fraction);
 		float y = forCurrentY(fraction, startPoint.getY());
