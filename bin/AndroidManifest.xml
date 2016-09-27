@@ -80,6 +80,12 @@
         <activity
             android:name="com.example.activity.SinPathActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.activity.BezierActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.activity.BezierPathActivity"
+            android:screenOrientation="portrait" />
         
     </application>
 

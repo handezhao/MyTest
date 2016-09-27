@@ -4,20 +4,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="three"
-        android:textColor="#454545"
-        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/tv_touch"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
         android:background="@drawable/selector_button_default"
         android:padding="10dp"
         android:text="TOTOUCH"
@@ -57,6 +50,34 @@
         android:paddingLeft="30dp"
         android:paddingRight="30dp"
         android:text="sin"
+        android:textColor="#454545"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_bezier"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_button_default"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="bezier"
+        android:textColor="#454545"
+        android:layout_gravity="center_horizontal"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/tv_bezier_animator"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/selector_button_default"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        android:text="bezierAnima"
         android:textColor="#454545"
         android:layout_gravity="center_horizontal"
         android:textSize="18sp" />
