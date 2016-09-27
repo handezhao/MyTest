@@ -172,4 +172,158 @@ MyTest
 			return true;
 			}
 		}
+		
+### 关于属性动画和贝塞尔曲线
+	先看看效果图
+![github](https://github.com/handezhao/MyTest/raw/master/picture/bezier.gif)
+	
+	Android中的canvas可以用drawPath()配合path.quadTo()方法画贝塞尔曲线，而要做贝塞尔曲线的动画首先想到的就是自定义的TypeEvaluator
+	只要我们能获取贝塞尔曲线上的任一点坐标就可以达到我们的目标了，下面看代码：
+	public class BezierEvaluator implements TypeEvaluator<Point> {
+	
+	private Point mControlPoint;
+
+        public BezierEvaluator(Point controlPoint) {
+        this.mControlPoint = controlPoint;
+    	}
+
+	@Override
+	public Point evaluate(float fraction, Point start, Point end) {
+		//返回当前坐标值
+		return BezierUtil.CalculateBezierPointForQuadratic(fraction, start, mControlPoint, end);
+	}
+	
+	 /**
+     	* B(t) = (1 - t)^2 * P0 + 2t * (1 - t) * P1 + t^2 * P2, t ∈ [0,1]
+     	*二阶贝塞尔曲线上任一点坐标值算法
+     	* @param t  曲线长度比例
+     	* @param p0 起始点
+     	* @param p1 控制点
+     	* @param p2 终止点
+     	* @return t对应的点
+     	*/
+   	 public static Point CalculateBezierPointForQuadratic(float t, Point p0, Point p1, Point p2) {
+    		Point point = new Point();
+       	 float temp = 1 - t;
+       	 point.x = temp * temp * p0.x + 2 * t * temp * p1.x + t * t * p2.x;
+       	 point.y = temp * temp * p0.y + 2 * t * temp * p1.y + t * t * p2.y;
+       	 return point;
+  	  }
+	  
+	  在我自定义的PathBezier中：
+	  	public class PathBezier extends View {
+		
+		private static final String TAG = "PathBezier";
+		
+		private Paint mPathPaint;
+		private Paint mCirclePaint;
+		
+		private int mStartPointX;
+		private int mStartPointY;
+		private int mEndPointX;
+		private int mEndPointY;
+		
+		private int mMovePointX;
+		private int mMovePointY;
+		
+		private int mControlPointX;
+		private int mControlPointY;
+	
+		private Path mPath;
+		private Paint linePaint;
+
+		public PathBezier(Context context) {
+			super(context);
+		}
+
+		public PathBezier(Context context, AttributeSet attrs) {
+		        super(context, attrs);
+		        mPathPaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+	  	      mPathPaint.setStyle(Paint.Style.STROKE);
+	 	       mPathPaint.setStrokeWidth(5);
+	 	       mCirclePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+			        
+	 	       linePaint = new Paint(Paint.ANTI_ALIAS_FLAG);
+	 	       linePaint.setStyle(Paint.Style.STROKE);
+	   		linePaint.setStrokeWidth(2);
+	   		linePaint.setColor(Color.parseColor("#9c9c9c"));
+	 	       linePaint.setAntiAlias(true);
+	 		       
+		        DisplayMetrics display = context.getResources().getDisplayMetrics();
+		        float screenWidth = display.widthPixels;
+		        float screenHeight = display.heightPixels;
+	 	       mStartPointX = 100;
+	 	       mStartPointY = 100;
+	  			      
+	   	     mEndPointX = (int) (screenWidth - 60);
+	 	       mEndPointY = (int) (screenHeight - 400);
+	        
+	  	      Log.d(TAG, "screenWidth is " + screenWidth + " and screenHeight is " + screenHeight);
+	 	       Log.d(TAG, "mEndPointX is " + mEndPointX + " and mEndPointY is " + mEndPointY);
+		        mMovePointX = mStartPointX;
+	 	       mMovePointY = mStartPointY;
+		        mControlPointX = (int) (screenWidth/2);
+	 	       mControlPointY = 100;
+		        mPath = new Path();
+		    }
+
+		public PathBezier(Context context, AttributeSet attrs, int defStyleAttr) {
+			super(context, attrs, defStyleAttr);
+		}
+
+		@Override
+		protected void onDraw(Canvas canvas) {
+			super.onDraw(canvas);
+			mPath.reset();
+			canvas.drawCircle(mStartPointX, mStartPointY, 30, mCirclePaint);
+			canvas.drawCircle(mEndPointX, mEndPointY, 30, mCirclePaint);
+			mPath.moveTo(mStartPointX, mStartPointY);
+			mPath.quadTo(mControlPointX, mControlPointY, mEndPointX, mEndPointY);
+			canvas.drawPath(mPath, mPathPaint);
+			canvas.drawCircle(mMovePointX, mMovePointY, 30, mCirclePaint);
+			canvas.drawCircle(mControlPointX, mControlPointY, 10, mCirclePaint);
+			canvas.drawLine(mStartPointX, mStartPointY, mControlPointX, mControlPointY, linePaint);
+			canvas.drawLine(mControlPointX, mControlPointY, mMovePointX, mMovePointY, linePaint);
+		}
+
+		@Override
+		public boolean onTouchEvent(MotionEvent event) {
+			switch (event.getAction()) {
+			case MotionEvent.ACTION_DOWN:
+				mControlPointX = (int) event.getX();
+				mControlPointY = (int) event.getY();
+				invalidate();
+				break;
+			case MotionEvent.ACTION_MOVE:
+				mControlPointX = (int) event.getX();
+				mControlPointY = (int) event.getY();
+				invalidate();
+				break;
+			case MotionEvent.ACTION_UP:
+				BezierEvaluator bezierEvaluator = new BezierEvaluator(new Point(mControlPointX, mControlPointY));
+				Point start = new Point(mStartPointX, mStartPointY);
+				Point end = new Point(mEndPointX, mEndPointY);
+				ValueAnimator anim = ValueAnimator.ofObject(bezierEvaluator, start, end);
+				anim.setDuration(3000);
+				anim.setInterpolator(new AccelerateDecelerateInterpolator());
+				anim.addUpdateListener(new AnimatorUpdateListener() {
+				
+					@Override
+						public void onAnimationUpdate(ValueAnimator animation) {
+						Point currentPoint = (Point) animation.getAnimatedValue();
+						mMovePointX = (int) currentPoint.getX();
+						mMovePointY = (int) currentPoint.getY();
+						invalidate();
+					}
+				});
+				anim.start();
+				break;
+			}
+			return true;
+		}
+
+	}
+
+	}
+	
 
