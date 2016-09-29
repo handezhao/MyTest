@@ -86,6 +86,12 @@
         <activity
             android:name="com.example.activity.BezierPathActivity"
             android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.activity.HeartActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.example.activity.CrazyActivity"
+            android:screenOrientation="portrait" />
         
     </application>
 

@@ -12,6 +12,8 @@ import android.widget.TextView;
 import com.example.activity.AnimationActivity;
 import com.example.activity.BezierActivity;
 import com.example.activity.BezierPathActivity;
+import com.example.activity.CrazyActivity;
+import com.example.activity.HeartActivity;
 import com.example.activity.PositionAnimationActivity;
 import com.example.activity.SinPathActivity;
 import com.example.activity.TouchEventActivity;
@@ -19,7 +21,7 @@ import com.example.mytest.R;
 
 public class ThreeFragment extends Fragment implements OnClickListener {
 	
-	private TextView tvTouch, tvAnimation, tvPosition, tvSin, tvBezier, tvBezierAnima;
+	private TextView tvTouch, tvAnimation, tvPosition, tvSin, tvBezier, tvBezierAnima, tvHeart, tvCrazy;
 	@Override
 	public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
 		View view = inflater.inflate(R.layout.fragment_three, container, false);
@@ -41,6 +43,12 @@ public class ThreeFragment extends Fragment implements OnClickListener {
 		
 		tvBezierAnima = (TextView) view.findViewById(R.id.tv_bezier_animator);
 		tvBezierAnima.setOnClickListener(this);
+		
+		tvHeart = (TextView) view.findViewById(R.id.tv_heart);
+		tvHeart.setOnClickListener(this);
+		
+		tvCrazy = (TextView) view.findViewById(R.id.tv_crazy);
+		tvCrazy.setOnClickListener(this);
 		
 		return view;
 	}
@@ -64,6 +72,12 @@ public class ThreeFragment extends Fragment implements OnClickListener {
 			break;
 		case R.id.tv_bezier_animator:
 			startActivity(new Intent(getActivity(), BezierPathActivity.class));
+			break;
+		case R.id.tv_heart:
+			startActivity(new Intent(getActivity(), HeartActivity.class));
+			break;
+		case R.id.tv_crazy:
+			startActivity(new Intent(getActivity(), CrazyActivity.class));
 			break;
 		}
 	}

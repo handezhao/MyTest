@@ -123,12 +123,9 @@ public class PathBezier extends View {
 					invalidate();
 				}
 			});
-
 			anim.start();
-		
 			break;
 		}
-		
 		return true;
 	}
 
