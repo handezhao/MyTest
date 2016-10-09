@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lp="http://schemas.android.com/apk/res/com.example.mytest"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black"
+    android:orientation="vertical" >
+
+    <com.example.widget.SlideView
+        android:id="@+id/slide_view"
+        android:layout_width="240dp"
+        android:layout_height="60dp"
+        android:layout_centerInParent="true"
+        lp:radios="30dp"
+        lp:lock_tips_tx="滑动解锁"
+        lp:locl_tips_tx_size="16sp"
+        lp:lock_tips_tx_color="#0000ff"/>
+
+</RelativeLayout>

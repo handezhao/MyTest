@@ -2,6 +2,7 @@ package com.example.fragment;
 
 import java.util.ArrayList;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
@@ -11,8 +12,10 @@ import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.activity.ServiceActivity;
 import com.example.adapter.TestAdapter;
 import com.example.adapter.TestAdapter.ButtonListener;
 import com.example.bean.TestBean;
@@ -29,6 +32,7 @@ public class OneFragment extends Fragment implements OnItemClickListener {
 	
 	private TestAdapter adapter;
 	private Titlebar titlebar;
+	private TextView tvService;
 	
 
 	@Override
@@ -44,6 +48,15 @@ public class OneFragment extends Fragment implements OnItemClickListener {
 				Console.toast(getActivity(), "hahaha");
 			}
 		});
+		
+		tvService = (TextView) view.findViewById(R.id.tv_service);
+		tvService.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View view) {
+				startActivity(new Intent(getActivity(), ServiceActivity.class));
+			}
+		});
 		View toastView = inflater.inflate(R.layout.toast, null);
 		ToastUtil toast = new ToastUtil(getActivity(), toastView, 500);
 		toast.show();
@@ -53,7 +66,7 @@ public class OneFragment extends Fragment implements OnItemClickListener {
 
 	private void initdata() {
 		
-		for (int i = 1; i < 9; i++) {
+		for (int i = 1; i < 6; i++) {
 			TestBean bean = new TestBean();
 			bean.setName("name " + i);
 			bean.setInfo("test info " + i);

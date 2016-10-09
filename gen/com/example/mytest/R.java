@@ -18,6 +18,31 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
 <p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
          */
+        public static final int lock_tips_tx=0x7f010002;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+         */
+        public static final int lock_tips_tx_color=0x7f010004;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+         */
+        public static final int locl_tips_tx_size=0x7f010003;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+         */
+        public static final int radios=0x7f010005;
+        /** <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+         */
         public static final int title=0x7f010001;
     }
     public static final class color {
@@ -81,64 +106,70 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int shape_point=0x7f02001a;
     }
     public static final class id {
-        public static final int animview=0x7f070011;
-        public static final int button1=0x7f070013;
-        public static final int button_item=0x7f07002e;
-        public static final int childs=0x7f070015;
-        public static final int countView=0x7f070020;
+        public static final int animview=0x7f070012;
+        public static final int button1=0x7f070018;
+        public static final int button_item=0x7f070034;
+        public static final int childs=0x7f07001a;
+        public static final int countView=0x7f070026;
         public static final int crazy_view=0x7f070005;
-        public static final int fl_fragment_container=0x7f070010;
+        public static final int fl_fragment_container=0x7f070011;
         public static final int heart=0x7f070004;
-        public static final int iv_active=0x7f070033;
-        public static final int iv_contact=0x7f070036;
-        public static final int iv_cover=0x7f070027;
-        public static final int iv_mine=0x7f070038;
-        public static final int iv_more=0x7f07002a;
-        public static final int iv_walking=0x7f070031;
-        public static final int ll_contact=0x7f070035;
-        public static final int ll_deviceInfo=0x7f070021;
+        public static final int iv_active=0x7f070039;
+        public static final int iv_contact=0x7f07003c;
+        public static final int iv_cover=0x7f07002d;
+        public static final int iv_mine=0x7f07003e;
+        public static final int iv_more=0x7f070030;
+        public static final int iv_walking=0x7f070037;
+        public static final int ll_contact=0x7f07003b;
+        public static final int ll_deviceInfo=0x7f070027;
         public static final int ll_point_circle_1=0x7f070000;
         public static final int ll_point_circle_2=0x7f070001;
         public static final int ll_point_circle_3=0x7f070002;
         public static final int ll_point_circle_4=0x7f070003;
-        public static final int ll_walking=0x7f070030;
+        public static final int ll_walking=0x7f070036;
         public static final int lv_info=0x7f070009;
-        public static final int lv_test=0x7f070017;
-        public static final int main_bottom=0x7f07000e;
+        public static final int lv_test=0x7f07001c;
+        public static final int main_bottom=0x7f07000f;
         public static final int rise_love=0x7f07000d;
-        public static final int rl_navigate_four=0x7f070037;
-        public static final int rl_navigate_one=0x7f07002f;
-        public static final int rl_navigate_three=0x7f070034;
-        public static final int rl_navigate_two=0x7f070032;
-        public static final int textView1=0x7f070014;
+        public static final int rl_navigate_four=0x7f07003d;
+        public static final int rl_navigate_one=0x7f070035;
+        public static final int rl_navigate_three=0x7f07003a;
+        public static final int rl_navigate_two=0x7f070038;
+        public static final int slide_view=0x7f07000e;
+        public static final int textView1=0x7f070019;
         public static final int titlebar=0x7f070006;
-        public static final int tv_animation=0x7f070019;
-        public static final int tv_artist=0x7f070029;
+        public static final int tv_animation=0x7f07001f;
+        public static final int tv_artist=0x7f07002f;
         public static final int tv_back_camera=0x7f070007;
-        public static final int tv_bezier=0x7f07001c;
-        public static final int tv_bezier_animator=0x7f07001d;
+        public static final int tv_bezier=0x7f070022;
+        public static final int tv_bezier_animator=0x7f070023;
+        public static final int tv_bind=0x7f070015;
         public static final int tv_cpu=0x7f07000b;
-        public static final int tv_crazy=0x7f07001f;
-        public static final int tv_display=0x7f070022;
-        public static final int tv_else=0x7f070023;
+        public static final int tv_crazy=0x7f070025;
+        public static final int tv_display=0x7f070028;
+        public static final int tv_else=0x7f070029;
         public static final int tv_front_camera=0x7f070008;
-        public static final int tv_heart=0x7f07001e;
-        public static final int tv_info=0x7f07002d;
-        public static final int tv_left=0x7f070039;
+        public static final int tv_heart=0x7f070024;
+        public static final int tv_info=0x7f070033;
+        public static final int tv_left=0x7f07003f;
         public static final int tv_metrics=0x7f07000a;
-        public static final int tv_name=0x7f07002c;
-        public static final int tv_position=0x7f07001a;
+        public static final int tv_name=0x7f070032;
+        public static final int tv_position=0x7f070020;
         public static final int tv_room=0x7f07000c;
-        public static final int tv_senorInfo=0x7f070025;
-        public static final int tv_sensor=0x7f070012;
-        public static final int tv_sin=0x7f07001b;
-        public static final int tv_test_four=0x7f070016;
-        public static final int tv_title=0x7f070028;
-        public static final int tv_toInfo=0x7f070024;
-        public static final int tv_touch=0x7f070018;
-        public static final int v_divider=0x7f07002b;
-        public static final int v_playing=0x7f070026;
-        public static final int view_bottom_line=0x7f07000f;
+        public static final int tv_senorInfo=0x7f07002b;
+        public static final int tv_sensor=0x7f070013;
+        public static final int tv_service=0x7f07001d;
+        public static final int tv_sin=0x7f070021;
+        public static final int tv_start=0x7f070014;
+        public static final int tv_stop=0x7f070017;
+        public static final int tv_test_four=0x7f07001b;
+        public static final int tv_title=0x7f07002e;
+        public static final int tv_toInfo=0x7f07002a;
+        public static final int tv_touch=0x7f07001e;
+        public static final int tv_unbind=0x7f070016;
+        public static final int v_divider=0x7f070031;
+        public static final int v_playing=0x7f07002c;
+        public static final int view_bottom_line=0x7f070010;
     }
     public static final class layout {
         public static final int activity_animation=0x7f030000;
@@ -149,22 +180,24 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int activity_devices_info=0x7f030005;
         public static final int activity_display=0x7f030006;
         public static final int activity_heart=0x7f030007;
-        public static final int activity_main=0x7f030008;
-        public static final int activity_position_animation=0x7f030009;
-        public static final int activity_sensor=0x7f03000a;
-        public static final int activity_sin=0x7f03000b;
-        public static final int activity_single_task=0x7f03000c;
-        public static final int activity_test=0x7f03000d;
-        public static final int activity_touch=0x7f03000e;
-        public static final int fragment_four=0x7f03000f;
-        public static final int fragment_one=0x7f030010;
-        public static final int fragment_three=0x7f030011;
-        public static final int fragment_two=0x7f030012;
-        public static final int item_music=0x7f030013;
-        public static final int item_test_bean=0x7f030014;
-        public static final int layout_navigation=0x7f030015;
-        public static final int toast=0x7f030016;
-        public static final int widget_titlebar=0x7f030017;
+        public static final int activity_lock=0x7f030008;
+        public static final int activity_main=0x7f030009;
+        public static final int activity_position_animation=0x7f03000a;
+        public static final int activity_sensor=0x7f03000b;
+        public static final int activity_service=0x7f03000c;
+        public static final int activity_sin=0x7f03000d;
+        public static final int activity_single_task=0x7f03000e;
+        public static final int activity_test=0x7f03000f;
+        public static final int activity_touch=0x7f030010;
+        public static final int fragment_four=0x7f030011;
+        public static final int fragment_one=0x7f030012;
+        public static final int fragment_three=0x7f030013;
+        public static final int fragment_two=0x7f030014;
+        public static final int item_music=0x7f030015;
+        public static final int item_test_bean=0x7f030016;
+        public static final int layout_navigation=0x7f030017;
+        public static final int toast=0x7f030018;
+        public static final int widget_titlebar=0x7f030019;
     }
     public static final class string {
         public static final int app_name=0x7f050000;
@@ -201,6 +234,74 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int AppTheme_Divider=0x7f060002;
     }
     public static final class styleable {
+        /** Attributes that can be used with a SlideLockView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #SlideLockView_lock_tips_tx com.example.mytest:lock_tips_tx}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlideLockView_lock_tips_tx_color com.example.mytest:lock_tips_tx_color}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlideLockView_locl_tips_tx_size com.example.mytest:locl_tips_tx_size}</code></td><td></td></tr>
+           <tr><td><code>{@link #SlideLockView_radios com.example.mytest:radios}</code></td><td></td></tr>
+           </table>
+           @see #SlideLockView_lock_tips_tx
+           @see #SlideLockView_lock_tips_tx_color
+           @see #SlideLockView_locl_tips_tx_size
+           @see #SlideLockView_radios
+         */
+        public static final int[] SlideLockView = {
+            0x7f010002, 0x7f010003, 0x7f010004, 0x7f010005
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.mytest.R.attr#lock_tips_tx}
+          attribute's value can be found in the {@link #SlideLockView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
+          @attr name com.example.mytest:lock_tips_tx
+        */
+        public static final int SlideLockView_lock_tips_tx = 0;
+        /**
+          <p>This symbol is the offset where the {@link com.example.mytest.R.attr#lock_tips_tx_color}
+          attribute's value can be found in the {@link #SlideLockView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a color value, in the form of "<code>#<i>rgb</i></code>", "<code>#<i>argb</i></code>",
+"<code>#<i>rrggbb</i></code>", or "<code>#<i>aarrggbb</i></code>".
+          @attr name com.example.mytest:lock_tips_tx_color
+        */
+        public static final int SlideLockView_lock_tips_tx_color = 2;
+        /**
+          <p>This symbol is the offset where the {@link com.example.mytest.R.attr#locl_tips_tx_size}
+          attribute's value can be found in the {@link #SlideLockView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+          @attr name com.example.mytest:locl_tips_tx_size
+        */
+        public static final int SlideLockView_locl_tips_tx_size = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.mytest.R.attr#radios}
+          attribute's value can be found in the {@link #SlideLockView} array.
+
+
+          <p>May be a reference to another resource, in the form "<code>@[+][<i>package</i>:]<i>type</i>:<i>name</i></code>"
+or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>".
+<p>May be a dimension value, which is a floating point number appended with a unit such as "<code>14.5sp</code>".
+Available units are: px (pixels), dp (density-independent pixels), sp (scaled pixels based on preferred font size),
+in (inches), mm (millimeters).
+          @attr name com.example.mytest:radios
+        */
+        public static final int SlideLockView_radios = 3;
         /** Attributes that can be used with a Titlebar.
            <p>Includes the following attributes:</p>
            <table>

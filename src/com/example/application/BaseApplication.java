@@ -10,7 +10,7 @@ public class BaseApplication extends Application {
 	public void onCreate() {
 		super.onCreate();
 		instance = BaseApplication.this;
-		
+//		startService(new Intent(getInstance(), LockService.class));
 	}
 
 	public static BaseApplication getInstance() {

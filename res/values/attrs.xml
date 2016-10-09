@@ -8,5 +8,12 @@
         <attr name="left_text" />
         <attr name="title" />
     </declare-styleable>
+    
+    <declare-styleable name="SlideLockView">
+        <attr name="lock_tips_tx" format="string|reference" />
+        <attr name="locl_tips_tx_size" format="dimension|reference"/>
+        <attr name="lock_tips_tx_color" format="color|reference" />
+        <attr name="radios" format="dimension|reference"/>
+    </declare-styleable>
 
 </resources>
