@@ -44,6 +44,30 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
 <p>May be a string value, using '\\;' to escape characters such as '\\n' or '\\uxxxx' for a unicode character.
          */
         public static final int title=0x7f010001;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uvv_autoRotation=0x7f010008;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uvv_fitXY=0x7f010007;
+        /** <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+         */
+        public static final int uvv_scalable=0x7f010006;
     }
     public static final class color {
         public static final int black=0x7f04000c;
@@ -74,7 +98,17 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         /**  play bar 
          */
         public static final int translucent_white_96p=0x7f040017;
+        public static final int uvv_black=0x7f04001c;
+        public static final int uvv_gray=0x7f04001b;
+        public static final int uvv_light_gray=0x7f04001d;
+        public static final int uvv_titlebar_bg=0x7f04001e;
         public static final int white=0x7f04000b;
+    }
+    public static final class dimen {
+        /**  Default screen margins, per the Android Design guidelines. 
+         */
+        public static final int activity_horizontal_margin=0x7f050000;
+        public static final int activity_vertical_margin=0x7f050001;
     }
     public static final class drawable {
         public static final int bg_toast_corner=0x7f020000;
@@ -104,72 +138,107 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int selector_navigation_walk=0x7f020018;
         public static final int selector_title_left=0x7f020019;
         public static final int shape_point=0x7f02001a;
+        public static final int uvv_back_btn=0x7f02001b;
+        public static final int uvv_common_ic_loading_icon=0x7f02001c;
+        public static final int uvv_itv_player_play=0x7f02001d;
+        public static final int uvv_on_error=0x7f02001e;
+        public static final int uvv_play_vb_bg=0x7f02001f;
+        public static final int uvv_play_vb_bg_progress=0x7f020020;
+        public static final int uvv_player_player_btn=0x7f020021;
+        public static final int uvv_player_scale_btn=0x7f020022;
+        public static final int uvv_progress_rotate=0x7f020023;
+        public static final int uvv_seek_dot=0x7f020024;
+        public static final int uvv_star_play_progress_seek=0x7f020025;
+        public static final int uvv_star_zoom_in=0x7f020026;
+        public static final int uvv_stop_btn=0x7f020027;
+        public static final int uvv_volume_btn=0x7f020028;
     }
     public static final class id {
-        public static final int animview=0x7f070012;
-        public static final int button1=0x7f070018;
-        public static final int button_item=0x7f070034;
-        public static final int childs=0x7f07001a;
-        public static final int countView=0x7f070026;
-        public static final int crazy_view=0x7f070005;
-        public static final int fl_fragment_container=0x7f070011;
-        public static final int heart=0x7f070004;
-        public static final int iv_active=0x7f070039;
-        public static final int iv_contact=0x7f07003c;
-        public static final int iv_cover=0x7f07002d;
-        public static final int iv_mine=0x7f07003e;
-        public static final int iv_more=0x7f070030;
-        public static final int iv_walking=0x7f070037;
-        public static final int ll_contact=0x7f07003b;
-        public static final int ll_deviceInfo=0x7f070027;
-        public static final int ll_point_circle_1=0x7f070000;
-        public static final int ll_point_circle_2=0x7f070001;
-        public static final int ll_point_circle_3=0x7f070002;
-        public static final int ll_point_circle_4=0x7f070003;
-        public static final int ll_walking=0x7f070036;
-        public static final int lv_info=0x7f070009;
-        public static final int lv_test=0x7f07001c;
-        public static final int main_bottom=0x7f07000f;
-        public static final int rise_love=0x7f07000d;
-        public static final int rl_navigate_four=0x7f07003d;
-        public static final int rl_navigate_one=0x7f070035;
-        public static final int rl_navigate_three=0x7f07003a;
-        public static final int rl_navigate_two=0x7f070038;
-        public static final int slide_view=0x7f07000e;
-        public static final int textView1=0x7f070019;
-        public static final int titlebar=0x7f070006;
-        public static final int tv_animation=0x7f07001f;
-        public static final int tv_artist=0x7f07002f;
-        public static final int tv_back_camera=0x7f070007;
-        public static final int tv_bezier=0x7f070022;
-        public static final int tv_bezier_animator=0x7f070023;
-        public static final int tv_bind=0x7f070015;
-        public static final int tv_cpu=0x7f07000b;
-        public static final int tv_crazy=0x7f070025;
-        public static final int tv_display=0x7f070028;
-        public static final int tv_else=0x7f070029;
-        public static final int tv_front_camera=0x7f070008;
-        public static final int tv_heart=0x7f070024;
-        public static final int tv_info=0x7f070033;
-        public static final int tv_left=0x7f07003f;
-        public static final int tv_metrics=0x7f07000a;
-        public static final int tv_name=0x7f070032;
-        public static final int tv_position=0x7f070020;
-        public static final int tv_room=0x7f07000c;
-        public static final int tv_senorInfo=0x7f07002b;
-        public static final int tv_sensor=0x7f070013;
-        public static final int tv_service=0x7f07001d;
-        public static final int tv_sin=0x7f070021;
-        public static final int tv_start=0x7f070014;
-        public static final int tv_stop=0x7f070017;
-        public static final int tv_test_four=0x7f07001b;
-        public static final int tv_title=0x7f07002e;
-        public static final int tv_toInfo=0x7f07002a;
-        public static final int tv_touch=0x7f07001e;
-        public static final int tv_unbind=0x7f070016;
-        public static final int v_divider=0x7f070031;
-        public static final int v_playing=0x7f07002c;
-        public static final int view_bottom_line=0x7f070010;
+        public static final int animview=0x7f080012;
+        public static final int back_btn=0x7f08004b;
+        public static final int bottom_layout=0x7f08001e;
+        public static final int button1=0x7f080018;
+        public static final int button_item=0x7f08003b;
+        public static final int center_play_btn=0x7f08004d;
+        public static final int childs=0x7f08001a;
+        public static final int control_layout=0x7f08004e;
+        public static final int countView=0x7f08002d;
+        public static final int crazy_view=0x7f080005;
+        public static final int duration=0x7f080053;
+        public static final int error_layout=0x7f080049;
+        public static final int error_text=0x7f080046;
+        public static final int fl_fragment_container=0x7f080011;
+        public static final int has_played=0x7f080051;
+        public static final int heart=0x7f080004;
+        public static final int introduction=0x7f080020;
+        public static final int iv_active=0x7f080040;
+        public static final int iv_contact=0x7f080043;
+        public static final int iv_cover=0x7f080034;
+        public static final int iv_mine=0x7f080045;
+        public static final int iv_more=0x7f080037;
+        public static final int iv_walking=0x7f08003e;
+        public static final int ll_contact=0x7f080042;
+        public static final int ll_deviceInfo=0x7f08002e;
+        public static final int ll_point_circle_1=0x7f080000;
+        public static final int ll_point_circle_2=0x7f080001;
+        public static final int ll_point_circle_3=0x7f080002;
+        public static final int ll_point_circle_4=0x7f080003;
+        public static final int ll_walking=0x7f08003d;
+        public static final int loading_layout=0x7f080048;
+        public static final int loading_text=0x7f080047;
+        public static final int lv_info=0x7f080009;
+        public static final int lv_test=0x7f080022;
+        public static final int main_bottom=0x7f08000f;
+        public static final int media_controller=0x7f08001d;
+        public static final int rise_love=0x7f08000d;
+        public static final int rl_navigate_four=0x7f080044;
+        public static final int rl_navigate_one=0x7f08003c;
+        public static final int rl_navigate_three=0x7f080041;
+        public static final int rl_navigate_two=0x7f08003f;
+        public static final int scale_button=0x7f080050;
+        public static final int seekbar=0x7f080052;
+        public static final int slide_view=0x7f08000e;
+        public static final int start=0x7f08001f;
+        public static final int textView1=0x7f080019;
+        public static final int title=0x7f08004c;
+        public static final int title_part=0x7f08004a;
+        public static final int titlebar=0x7f080006;
+        public static final int turn_button=0x7f08004f;
+        public static final int tv_animation=0x7f080026;
+        public static final int tv_artist=0x7f080036;
+        public static final int tv_back_camera=0x7f080007;
+        public static final int tv_bezier=0x7f080029;
+        public static final int tv_bezier_animator=0x7f08002a;
+        public static final int tv_bind=0x7f080015;
+        public static final int tv_cpu=0x7f08000b;
+        public static final int tv_crazy=0x7f08002c;
+        public static final int tv_display=0x7f08002f;
+        public static final int tv_else=0x7f080030;
+        public static final int tv_front_camera=0x7f080008;
+        public static final int tv_heart=0x7f08002b;
+        public static final int tv_info=0x7f08003a;
+        public static final int tv_left=0x7f080054;
+        public static final int tv_metrics=0x7f08000a;
+        public static final int tv_name=0x7f080039;
+        public static final int tv_position=0x7f080027;
+        public static final int tv_room=0x7f08000c;
+        public static final int tv_senorInfo=0x7f080032;
+        public static final int tv_sensor=0x7f080013;
+        public static final int tv_service=0x7f080023;
+        public static final int tv_sin=0x7f080028;
+        public static final int tv_start=0x7f080014;
+        public static final int tv_stop=0x7f080017;
+        public static final int tv_test_four=0x7f080021;
+        public static final int tv_title=0x7f080035;
+        public static final int tv_toInfo=0x7f080031;
+        public static final int tv_touch=0x7f080025;
+        public static final int tv_unbind=0x7f080016;
+        public static final int tv_video=0x7f080024;
+        public static final int v_divider=0x7f080038;
+        public static final int v_playing=0x7f080033;
+        public static final int videoView=0x7f08001c;
+        public static final int video_layout=0x7f08001b;
+        public static final int view_bottom_line=0x7f080010;
     }
     public static final class layout {
         public static final int activity_animation=0x7f030000;
@@ -180,29 +249,34 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
         public static final int activity_devices_info=0x7f030005;
         public static final int activity_display=0x7f030006;
         public static final int activity_heart=0x7f030007;
-        public static final int activity_lock=0x7f030008;
-        public static final int activity_main=0x7f030009;
-        public static final int activity_position_animation=0x7f03000a;
-        public static final int activity_sensor=0x7f03000b;
-        public static final int activity_service=0x7f03000c;
-        public static final int activity_sin=0x7f03000d;
-        public static final int activity_single_task=0x7f03000e;
-        public static final int activity_test=0x7f03000f;
-        public static final int activity_touch=0x7f030010;
-        public static final int fragment_four=0x7f030011;
-        public static final int fragment_one=0x7f030012;
-        public static final int fragment_three=0x7f030013;
-        public static final int fragment_two=0x7f030014;
-        public static final int item_music=0x7f030015;
-        public static final int item_test_bean=0x7f030016;
-        public static final int layout_navigation=0x7f030017;
-        public static final int toast=0x7f030018;
-        public static final int widget_titlebar=0x7f030019;
+        public static final int activity_linearlayout=0x7f030008;
+        public static final int activity_lock=0x7f030009;
+        public static final int activity_main=0x7f03000a;
+        public static final int activity_position_animation=0x7f03000b;
+        public static final int activity_sensor=0x7f03000c;
+        public static final int activity_service=0x7f03000d;
+        public static final int activity_sin=0x7f03000e;
+        public static final int activity_single_task=0x7f03000f;
+        public static final int activity_test=0x7f030010;
+        public static final int activity_touch=0x7f030011;
+        public static final int activity_video=0x7f030012;
+        public static final int fragment_four=0x7f030013;
+        public static final int fragment_one=0x7f030014;
+        public static final int fragment_three=0x7f030015;
+        public static final int fragment_two=0x7f030016;
+        public static final int item_music=0x7f030017;
+        public static final int item_test_bean=0x7f030018;
+        public static final int layout_navigation=0x7f030019;
+        public static final int toast=0x7f03001a;
+        public static final int uvv_on_error_layout=0x7f03001b;
+        public static final int uvv_on_loading_layout=0x7f03001c;
+        public static final int uvv_player_controller=0x7f03001d;
+        public static final int widget_titlebar=0x7f03001e;
     }
     public static final class string {
-        public static final int app_name=0x7f050000;
-        public static final int back=0x7f050001;
-        public static final int one=0x7f050002;
+        public static final int app_name=0x7f060000;
+        public static final int back=0x7f060001;
+        public static final int one=0x7f060002;
     }
     public static final class style {
         /** 
@@ -226,12 +300,12 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
     
  API 14 theme customizations can go here. 
          */
-        public static final int AppBaseTheme=0x7f060000;
+        public static final int AppBaseTheme=0x7f070000;
         /**  Application theme. 
- All customizations that are NOT specific to a particular API-level can go here. 
          */
-        public static final int AppTheme=0x7f060001;
-        public static final int AppTheme_Divider=0x7f060002;
+        public static final int AppTheme=0x7f070001;
+        public static final int AppTheme_Divider=0x7f070002;
+        public static final int Universal_Widget_ProgressBar=0x7f070003;
     }
     public static final class styleable {
         /** Attributes that can be used with a SlideLockView.
@@ -339,5 +413,75 @@ or to a theme attribute in the form "<code>?[<i>package</i>:][<i>type</i>:]<i>na
           @attr name com.example.mytest:title
         */
         public static final int Titlebar_title = 1;
+        /** Attributes that can be used with a UniversalMediaController.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #UniversalMediaController_uvv_scalable com.example.mytest:uvv_scalable}</code></td><td></td></tr>
+           </table>
+           @see #UniversalMediaController_uvv_scalable
+         */
+        public static final int[] UniversalMediaController = {
+            0x7f010006
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.mytest.R.attr#uvv_scalable}
+          attribute's value can be found in the {@link #UniversalMediaController} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.mytest:uvv_scalable
+        */
+        public static final int UniversalMediaController_uvv_scalable = 0;
+        /** Attributes that can be used with a UniversalVideoView.
+           <p>Includes the following attributes:</p>
+           <table>
+           <colgroup align="left" />
+           <colgroup align="left" />
+           <tr><th>Attribute</th><th>Description</th></tr>
+           <tr><td><code>{@link #UniversalVideoView_uvv_autoRotation com.example.mytest:uvv_autoRotation}</code></td><td></td></tr>
+           <tr><td><code>{@link #UniversalVideoView_uvv_fitXY com.example.mytest:uvv_fitXY}</code></td><td></td></tr>
+           </table>
+           @see #UniversalVideoView_uvv_autoRotation
+           @see #UniversalVideoView_uvv_fitXY
+         */
+        public static final int[] UniversalVideoView = {
+            0x7f010007, 0x7f010008
+        };
+        /**
+          <p>This symbol is the offset where the {@link com.example.mytest.R.attr#uvv_autoRotation}
+          attribute's value can be found in the {@link #UniversalVideoView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.mytest:uvv_autoRotation
+        */
+        public static final int UniversalVideoView_uvv_autoRotation = 1;
+        /**
+          <p>This symbol is the offset where the {@link com.example.mytest.R.attr#uvv_fitXY}
+          attribute's value can be found in the {@link #UniversalVideoView} array.
+
+
+          <p>Must be a boolean value, either "<code>true</code>" or "<code>false</code>".
+<p>This may also be a reference to a resource (in the form
+"<code>@[<i>package</i>:]<i>type</i>:<i>name</i></code>") or
+theme attribute (in the form
+"<code>?[<i>package</i>:][<i>type</i>:]<i>name</i></code>")
+containing a value of this type.
+          @attr name com.example.mytest:uvv_fitXY
+        */
+        public static final int UniversalVideoView_uvv_fitXY = 0;
     };
 }

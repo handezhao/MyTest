@@ -15,7 +15,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.activity.LinearLayoutActivity;
 import com.example.activity.ServiceActivity;
+import com.example.activity.ViideoActivity;
 import com.example.adapter.TestAdapter;
 import com.example.adapter.TestAdapter.ButtonListener;
 import com.example.bean.TestBean;
@@ -32,7 +34,7 @@ public class OneFragment extends Fragment implements OnItemClickListener {
 	
 	private TestAdapter adapter;
 	private Titlebar titlebar;
-	private TextView tvService;
+	private TextView tvService, tvVideo;
 	
 
 	@Override
@@ -57,6 +59,16 @@ public class OneFragment extends Fragment implements OnItemClickListener {
 				startActivity(new Intent(getActivity(), ServiceActivity.class));
 			}
 		});
+		
+		tvVideo = (TextView) view.findViewById(R.id.tv_video);
+		tvVideo.setOnClickListener(new OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startActivity(new Intent(getActivity(), ViideoActivity.class));
+			}
+		});
+		
 		View toastView = inflater.inflate(R.layout.toast, null);
 		ToastUtil toast = new ToastUtil(getActivity(), toastView, 500);
 		toast.show();
@@ -90,6 +102,9 @@ public class OneFragment extends Fragment implements OnItemClickListener {
 	
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-		Toast.makeText(getActivity(), "" + (position + 1), Toast.LENGTH_SHORT).show();
+		if (position == 0) {
+			startActivity(new Intent(getActivity(), LinearLayoutActivity.class));
+		}
+//		Toast.makeText(getActivity(), "" + (position + 1), Toast.LENGTH_SHORT).show();
 	}
 }

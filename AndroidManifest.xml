@@ -95,8 +95,12 @@
             android:name="com.example.activity.LockActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name="com.example.activity.LinearLayoutActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name="com.example.activity.ServiceActivity"
             android:screenOrientation="portrait" />
+        <activity android:name="com.example.activity.ViideoActivity" />
 
         <service android:name="com.example.service.LockService" />
     </application>

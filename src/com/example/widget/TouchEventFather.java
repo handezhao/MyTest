@@ -30,6 +30,7 @@ public class TouchEventFather extends LinearLayout {
 //	         return true;
 //	          return false;
 	     }
+	     
 
 	     public boolean onTouchEvent(MotionEvent ev) {
 	         Log.d("sunzn", "TouchEventFather | onTouchEvent --> " + TouchEventUtil.getTouchAction(ev.getAction()));

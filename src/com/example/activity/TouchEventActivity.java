@@ -33,6 +33,7 @@ public class TouchEventActivity extends Activity {
 	         Log.w("sunzn", "TouchEventActivity | dispatchTouchEvent --> " + super.dispatchTouchEvent(ev));
 	         return super.dispatchTouchEvent(ev);
 	     }
+	     
 
 	     public boolean onTouchEvent(MotionEvent event) {
 	         Log.w("sunzn", "TouchEventActivity | onTouchEvent --> " + TouchEventUtil.getTouchAction(event.getAction()));
