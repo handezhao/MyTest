@@ -17,6 +17,7 @@ import android.widget.Toast;
 
 import com.example.activity.LinearLayoutActivity;
 import com.example.activity.ServiceActivity;
+import com.example.activity.TextSpanActivity;
 import com.example.activity.ViideoActivity;
 import com.example.adapter.TestAdapter;
 import com.example.adapter.TestAdapter.ButtonListener;
@@ -104,6 +105,8 @@ public class OneFragment extends Fragment implements OnItemClickListener {
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 		if (position == 0) {
 			startActivity(new Intent(getActivity(), LinearLayoutActivity.class));
+		} else if (position == 1) {
+			startActivity(new Intent(getActivity(), TextSpanActivity.class));
 		}
 //		Toast.makeText(getActivity(), "" + (position + 1), Toast.LENGTH_SHORT).show();
 	}
